@@ -8,5 +8,20 @@
 
 <h3>首页</h3>
 
+<button id="open-file-manager">打开用户文件夹</button>
+
+<script>
+    const {shell} = require('electron')
+    const os = require('os')
+
+    const fileManagerBtn = document.getElementById('open-file-manager')
+
+    fileManagerBtn.addEventListener('click', (event) => {
+        let homedir = os.homedir()
+        console.log(homedir)
+        shell.showItemInFolder(homedir)
+    })
+</script>
+
 </body>
 </html>
