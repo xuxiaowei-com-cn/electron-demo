@@ -8,7 +8,23 @@
 
 <h3>首页</h3>
 
-<a id="close" href="javascript:window.close()">Close this Window</a>
+<a id="close" href="javascript:window.close()">
+    <button>href="javascript:window.close()"</button>
+</a>
+
+<br>
+
+<a id="quit">
+    <button>app.quit()</button>
+</a>
+
+<script>
+    const {app} = require('electron').remote
+    const quitBtn = document.getElementById('quit')
+    quitBtn.addEventListener('click', (event) => {
+        app.quit()
+    })
+</script>
 
 </body>
 </html>

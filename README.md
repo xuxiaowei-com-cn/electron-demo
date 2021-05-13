@@ -82,6 +82,8 @@ D:\WebstormProjects\electron-demo>
 
 ### electron
 
+- 经过测试，electron 10.0.0 及之后的版本，不能再子进程中使用`remote`，请使用 electron 10.0.0 之前的版本
+
 ```
 npm config set ELECTRON_MIRROR https://npm.taobao.org/mirrors/electron/
 npm i -D electron
