@@ -8,5 +8,15 @@
 
 <h3>首页</h3>
 
+<button id="error-dialog">错误弹窗</button>
+
+<script>
+    const {ipcRenderer} = require('electron')
+    const errorBtn = document.getElementById('error-dialog')
+    errorBtn.addEventListener('click', (event) => {
+        ipcRenderer.send('open-error-dialog', '错误消息内容')
+    })
+</script>
+
 </body>
 </html>

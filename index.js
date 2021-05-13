@@ -3,6 +3,8 @@ const electron = require('electron')
 app = electron.app
 
 const BrowserWindow = electron.BrowserWindow
+const dialog = electron.dialog
+const ipcMain = electron.ipcMain
 
 let win;
 
@@ -19,6 +21,11 @@ app.on('ready', function () {
     win.on('close', function () {
         win = null
     })
+
+    ipcMain.on('open-error-dialog', (event, args) => {
+        dialog.showErrorBox('错误消息', args == null ? '默认错误消息内容。' : args)
+    })
+
 
 })
 
