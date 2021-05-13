@@ -1,0 +1,22 @@
+{
+  "name": "electron-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuxiaowei-com-cn/electron-demo.git"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "徐晓伟",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xuxiaowei-com-cn/electron-demo/issues"
+  },
+  "homepage": "https://github.com/xuxiaowei-com-cn/electron-demo#readme"
+}
