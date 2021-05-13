@@ -4,6 +4,7 @@ app = electron.app
 Menu = electron.Menu
 shell = electron.shell
 dialog = electron.dialog
+globalShortcut = electron.globalShortcut
 
 const BrowserWindow = electron.BrowserWindow
 
@@ -267,4 +268,18 @@ app.on('browser-window-created', () => {
 app.on('window-all-closed', () => {
     let reopenMenuItem = findReopenMenuItem()
     if (reopenMenuItem) reopenMenuItem.enabled = true
+})
+
+app.on('ready', () => {
+    globalShortcut.register('CommandOrControl+Alt+K', () => {
+        dialog.showMessageBox({
+            type: 'info',
+            message: 'Success!',
+            detail: 'You pressed the registered global shortcut keybinding.',
+            buttons: ['OK']
+        })
+    })
+})
+app.on('will-quit', () => {
+    globalShortcut.unregisterAll()
 })
