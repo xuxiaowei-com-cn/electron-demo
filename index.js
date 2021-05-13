@@ -9,6 +9,7 @@ let win;
 app.on('ready', function () {
 
     win = new BrowserWindow({
+        frame: false,
         webPreferences: {
             nodeIntegration: true
         }
