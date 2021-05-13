@@ -8,5 +8,20 @@
 
 <h3>首页</h3>
 
+<button id="version-info">版本信息</button>
+<div id="got-version-info"></div>
+
+<script>
+    const versionInfoBtn = document.getElementById('version-info')
+    versions = process.versions
+    versionInfoBtn.addEventListener('click', () => {
+        let html = 'This app is version:'
+        for (let versionKey in versions) {
+            html += `<br>${versionKey}：${versions[versionKey]}`
+        }
+        document.getElementById('got-version-info').innerHTML = html
+    })
+</script>
+
 </body>
 </html>
