@@ -8,5 +8,34 @@
 
 <h3>首页</h3>
 
+<button id="basic-noti">Notification 基本通知</button>
+<button id="advanced-noti">Notification 高级通知</button>
+
+<script>
+    const notificationBasic = {title: '基本通知', body: '短消息部分'}
+    const notificationBasicButton = document.getElementById('basic-noti')
+    notificationBasicButton.addEventListener('click', () => {
+        const myNotification = new window.Notification(notification.title, notificationBasic)
+        myNotification.onclick = () => {
+            alert('已单击通知')
+        }
+    })
+</script>
+
+<script>
+    const notificationAdvanced = {
+        title: 'Notification with image',
+        body: 'Short message plus a custom image',
+        icon: 'programming.png'
+    }
+    const notificationAdvancedButton = document.getElementById('advanced-noti')
+    notificationAdvancedButton.addEventListener('click', () => {
+        const myNotification = new window.Notification(notificationAdvanced.title, notificationAdvanced)
+        myNotification.onclick = () => {
+            alert('已单击通知')
+        }
+    })
+</script>
+
 </body>
 </html>
