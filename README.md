@@ -77,3 +77,12 @@ Is this OK? (yes) yes
 
 D:\WebstormProjects\electron-demo>
 ```
+
+## Configuration
+
+### electron
+
+```
+npm config set ELECTRON_MIRROR https://npm.taobao.org/mirrors/electron/
+npm i -D electron
+```
