@@ -8,5 +8,19 @@
 
 <h3>首页</h3>
 
+<button id="openDevToolsBtn">控制开发者工具</button>
+
+<script>
+    let {remote} = require('electron')
+    document.querySelector('#openDevToolsBtn').addEventListener('click', function () {
+        let isDevToolsOpened = remote.getCurrentWindow().webContents.isDevToolsOpened()
+        if (isDevToolsOpened) {
+            remote.getCurrentWindow().webContents.closeDevTools()
+        } else {
+            remote.getCurrentWindow().webContents.openDevTools()
+        }
+    })
+</script>
+
 </body>
 </html>
