@@ -8,5 +8,25 @@
 
 <h3>首页</h3>
 
+<button id="sendMsg2">主进程向渲染进程发送消息</button>
+
+<span>查看控制台消息</span>
+
+<script>
+    let {ipcRenderer} = require('electron')
+
+    // 渲染进程向主进程发送消息
+    document.querySelector('#sendMsg2').addEventListener('click', () => {
+        ipcRenderer.send('msg_render2main', {name: 'param1'}, {name: 'param2'})
+    })
+
+    // 主进程向渲染进程发送消息
+    ipcRenderer.on('msg_main2render', (event, param1, param2) => {
+        console.log('渲染进程接收到消息1', param1)
+        console.log('渲染进程接收到消息2', param2)
+        console.log('渲染进程接收到发送者', event.sender)
+    })
+</script>
+
 </body>
 </html>

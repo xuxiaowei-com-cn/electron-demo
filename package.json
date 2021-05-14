@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "electron ./index.js",
+    "start": "chcp 65001 && electron ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/xuxiaowei-com-cn/electron-demo#readme",
   "devDependencies": {
-    "electron": "^12.0.7"
+    "electron": "^9.4.4"
   }
 }
