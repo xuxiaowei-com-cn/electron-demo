@@ -8,5 +8,42 @@
 
 <h3>首页</h3>
 
+<button id="sys-info">获取系统信息</button>
+<div id="got-sys-info"></div>
+
+<script>
+    const os = require('os')
+    const sysInfoBtn = document.getElementById('sys-info')
+    sysInfoBtn.addEventListener('click', () => {
+        let html = 'Your system is:'
+        html += `<br>hostname：${os.hostname()}`
+        html += `<br>loadavg：${os.loadavg()}`
+        html += `<br>uptime：${os.uptime()}`
+        html += `<br>freemem：${os.freemem()}`
+        html += `<br>totalmem：${os.totalmem()}`
+        html += `<br>cpus：`
+        for (let i in os.cpus()) {
+            html += `<br>cpu${i}：${os.cpus()[i].model}`
+        }
+
+        html += `<br>type：${os.type()}`
+        html += `<br>release：${os.release()}`
+        html += `<br>networkInterfaces：`
+        for (let networkInterfaceName in os.networkInterfaces()) {
+            html += `<br>networkInterface：${networkInterfaceName}`
+            let networkInterfaceValue = os.networkInterfaces()[networkInterfaceName]
+            html += `<br>address：`
+            for (let i in networkInterfaceValue) {
+                html += `${networkInterfaceValue[i].address} `
+            }
+        }
+        html += `<br>homedir：${os.homedir()}`
+        html += `<br>userInfo：${os.userInfo().username}`
+
+        document.getElementById('got-sys-info').innerHTML = html
+    })
+</script>
+
+
 </body>
 </html>
