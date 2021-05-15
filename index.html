@@ -6,13 +6,17 @@
 </head>
 <body>
 
-<h3>首页</h3>
+<h3 id="index">首页</h3>
+
+<span>请查看控制台</span>
 
 <script src="./objRender.js"></script>
 <script>
+    window.$ = window.jQuery = require('./jquery-3.6.0.min')
     let objRender2 = require('./objRender2')
     alert(window.objRender.key)
     alert(objRender2.key)
+    console.log('使用 jQuery', $('#index'))
 </script>
 
 </body>
