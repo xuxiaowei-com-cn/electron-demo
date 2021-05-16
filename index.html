@@ -8,5 +8,17 @@
 
 <h3>首页</h3>
 
+<button id="makeNewWindow2">使用渲染进程创建一个新窗口2</button>
+
+<script>
+    let {remote} = require('electron')
+    let mainModel = remote.require('./mainModel')
+    let win2 = null
+    document.querySelector('#makeNewWindow2').addEventListener('click', function () {
+        win2 = mainModel.makeWin()
+        win2.loadFile('index2.html')
+    })
+</script>
+
 </body>
 </html>
