@@ -22,6 +22,8 @@
     // 渲染进程向主进程发送消息
     document.querySelector('#sendMsg2').addEventListener('click', () => {
         ipcRenderer.send('msg_render2main', {name: 'param1'}, {name: 'param2'})
+        // 同步传递消息，渲染进程不需要监听，当消息发送调用成功时，返回值即为主进程设置的 event.returnValue 的值
+        // let returnValue = ipcRenderer.sendSync('msg_render2main', {name: 'param1'}, {name: 'param2'})
     })
 
     // 主进程向渲染进程发送消息

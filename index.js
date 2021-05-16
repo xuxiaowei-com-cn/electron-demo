@@ -34,6 +34,8 @@ app.on('ready', function () {
         console.log('主进程接收到发送者', event.sender)
         // 主进程接收消息的事件的 event.sender 代表发送消息的渲染进程的 webContents，所以可以通过使用这个对象来给对应的窗口发送消息
         event.sender.send('msg_main3render', param1, param2)
+        // 原理同上
+        // event.reply('msg_main3render', param1, param2)
     })
 
 })
