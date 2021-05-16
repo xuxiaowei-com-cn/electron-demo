@@ -8,5 +8,20 @@
 
 <h3>首页</h3>
 
+<button id="makeNewWindow">使用渲染进程创建一个新窗口</button>
+
+<script>
+    let {remote} = require('electron')
+    let win = null;
+    document.querySelector('#makeNewWindow').addEventListener('click', function () {
+        win = new remote.BrowserWindow({
+            webPreferences: {
+                nodeIntegration: true
+            }
+        })
+        win.loadFile('index2.html')
+    })
+</script>
+
 </body>
 </html>
