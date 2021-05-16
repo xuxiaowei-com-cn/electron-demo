@@ -2,9 +2,10 @@
   "name": "electron-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main/index.js",
   "scripts": {
-    "start": "electron ./index.js",
+    "start": "electron-webpack dev",
+    "build": "electron-webpack build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,13 @@
   },
   "homepage": "https://github.com/xuxiaowei-com-cn/electron-demo#readme",
   "devDependencies": {
-    "electron": "^12.0.7"
+    "electron": "^9.4.4",
+    "electron-webpack": "^2.8.2",
+    "webpack": "^4.46.0"
+  },
+  "electronWebpack": {
+    "renderer": {
+      "template": "src/renderer/index.html"
+    }
   }
 }
