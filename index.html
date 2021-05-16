@@ -8,5 +8,34 @@
 
 <h3>首页</h3>
 
+<button id="b">打开B页面</button>
+<button id="send-b-page">向B页面发送消息</button>
+
+<script>
+    let {remote, ipcRenderer} = require('electron')
+
+    let win_b = null
+
+    // 打开B页面
+    document.querySelector('#b').addEventListener('click', function () {
+        win_b = new remote.BrowserWindow({
+            webPreferences: {
+                nodeIntegration: true
+            }
+        })
+        win_b.loadFile('b.html')
+    })
+
+    // 向B页面发送消息
+    document.querySelector('#send-b-page').addEventListener('click', () => {
+        if (win_b == null) {
+            alert('B页面还未创建')
+        } else {
+            ipcRenderer.sendTo(win_b.webContents.id, 'msg_render_b', {name: 'param1'}, {name: 'param2'})
+        }
+    })
+
+</script>
+
 </body>
 </html>

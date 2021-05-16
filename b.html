@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>B页面</title>
+</head>
+<body>
+
+<h3>B页面</h3>
+
+<script>
+    let {ipcRenderer} = require('electron')
+
+    // B页面接收到A页面发送的消息
+    ipcRenderer.on('msg_render_b', (event, param1, param2) => {
+        console.log('B页面接收到A页面发送的消息1', param1)
+        console.log('B页面接收到A页面发送的消息2', param2)
+        console.log('B页面接收到A页面发送的发送者', event.sender)
+    })
+</script>
+
+</body>
+</html>
