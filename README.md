@@ -118,3 +118,8 @@ npm i -D vue-template-compiler
 vue add electron-builder
 ```
 
+### sass-loader
+
+```
+npm i -D sass-loader
+```
