@@ -86,3 +86,26 @@ D:\WebstormProjects\electron-demo>
 npm config set ELECTRON_MIRROR https://npm.taobao.org/mirrors/electron/
 npm i -D electron
 ```
+
+### @vue/cli
+
+- 全局安装 vue 脚手架
+
+```
+npm i -g @vue/cli
+```
+
+- 创建一个 vue 3 项目
+
+```
+vue create hello-world-vue3
+```
+
+- 将上述创建的项目根据目录结构复制到本项目中
+
+```
+npm i vue@next
+npm i core-js
+npm i -D @vue/cli-plugin-babel @vue/cli-plugin-eslint @vue/cli-service @vue/compiler-sfc babel-eslint eslint eslint-plugin-vue
+npm i -D vue-template-compiler
+```
