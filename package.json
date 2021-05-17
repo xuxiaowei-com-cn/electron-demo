@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/main/index.js",
   "scripts": {
-    "start": "electron-webpack dev",
+    "start": "chcp 65001 && electron-webpack dev",
     "build": "electron-webpack build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
