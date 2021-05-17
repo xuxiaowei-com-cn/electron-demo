@@ -109,3 +109,12 @@ npm i core-js
 npm i -D @vue/cli-plugin-babel @vue/cli-plugin-eslint @vue/cli-service @vue/compiler-sfc babel-eslint eslint eslint-plugin-vue
 npm i -D vue-template-compiler
 ```
+
+### electron-builder
+
+- 添加 Vue CLI Plugin Electron Builder
+
+```
+vue add electron-builder
+```
+
