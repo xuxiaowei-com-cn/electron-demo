@@ -8,6 +8,7 @@
 </template>
 
 <style>
+@import "../src/style/app.scss";
 
 #nav {
   padding: 30px;
