@@ -1,6 +1,6 @@
 'use strict'
 
-import { app, protocol, BrowserWindow, Tray } from 'electron'
+import { app, protocol, BrowserWindow, Tray, Menu } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 const isDevelopment = process.env.NODE_ENV !== 'production'
 let path = require('path')
@@ -10,13 +10,15 @@ protocol.registerSchemesAsPrivileged([
   { scheme: 'app', privileges: { secure: true, standard: true } }
 ])
 
+let win
+
 async function createWindow() {
   // Create the browser window.
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      
+
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
@@ -77,6 +79,28 @@ app.on('ready', async () => {
   let logoPath = path.join(__static, 'logo.png')
 
   let tray = new Tray(faviconPath)
+
+  tray.on('click', function () {
+    win.show()
+  })
+
+  let menu = Menu.buildFromTemplate([
+    {
+        label: '显示窗口',
+        type: 'normal',
+        click() {
+            win.show()
+        },
+    }, {
+      label: '退出应用',
+      type: 'normal',
+      click() {
+          app.quit()
+      }
+    }
+  ])
+
+  tray.setContextMenu(menu)
 
   let flag = true
 
