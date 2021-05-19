@@ -1,6 +1,6 @@
 'use strict'
 
-import { app, protocol, BrowserWindow } from 'electron'
+import { app, protocol, BrowserWindow, Tray } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 const isDevelopment = process.env.NODE_ENV !== 'production'
 let path = require('path')
@@ -70,6 +70,26 @@ app.on('ready', async () => {
   //   }
   // }
   createWindow()
+
+  // eslint-disable-next-line no-undef
+  let faviconPath = path.join(__static, 'favicon.ico')
+  // eslint-disable-next-line no-undef
+  let logoPath = path.join(__static, 'logo.png')
+
+  let tray = new Tray(faviconPath)
+
+  let flag = true
+
+  setInterval(()=>{
+    if (flag) {
+      tray.setImage(faviconPath)
+      flag = false
+    } else {
+      tray.setImage(logoPath)
+      flag = true
+    }
+  }, 600)
+
 })
 
 // Exit cleanly on request from parent process in development mode.
