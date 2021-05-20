@@ -3,7 +3,7 @@
 ## Node
 
 - version
-    - Node.js v14.16.1
+    - Node.js v14.17.0
 
 ## Project Init
 
