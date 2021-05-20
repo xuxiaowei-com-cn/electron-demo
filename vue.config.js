@@ -2,7 +2,7 @@ module.exports = {
     pluginOptions: {
         electronBuilder: {
             nodeIntegration: true,
-            externals: ['ffi-napi', 'ref-napi'],
+            externals: ['ffi-napi'],
             builderOptions: {
                 extraResources: [
                     {
