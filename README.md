@@ -127,3 +127,7 @@ npm i -D sass-loader
 ### vue-router
 
 - 使用 vue ui 添加 vue-router
+
+### vuex
+
+- 使用 vue ui 添加 vuex
