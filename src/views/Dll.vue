@@ -8,7 +8,7 @@
 </template>
 
 <script>
-const {remote} = require('electron')
+const {dialog} = require('@electron/remote')
 const ffi = require('ffi-napi')
 const path = require('path')
 const fs = require("fs")
@@ -31,7 +31,7 @@ export default {
       fs.access(dllPath, function (err){
         if (err) {
           console.error('DLL 文件不存在：', dllPath)
-          return remote.dialog.showMessageBox({
+          return dialog.showMessageBox({
             type: 'info',
             title: '返回dll的运算结果',
             message: 'DLL 文件不存在：' + dllPath,
@@ -54,7 +54,7 @@ export default {
           parseInt(document.getElementById("numB").value)
       )
 
-      let resultMessage = remote.dialog.showMessageBox({
+      let resultMessage = dialog.showMessageBox({
         type: 'info',
         title: '返回dll的运算结果',
         message: result.toString(),
