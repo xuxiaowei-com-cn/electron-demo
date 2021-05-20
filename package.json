@@ -35,10 +35,6 @@
     "vue-cli-plugin-electron-builder": "~2.0.0",
     "vue-template-compiler": "^2.6.12"
   },
-  "extraResources": {
-    "from": "./app-update.yml",
-    "to": "./bbb.txt"
-  },
   "eslintConfig": {
     "root": true,
     "env": {
