@@ -7,6 +7,17 @@
   <router-view/>
 </template>
 
+<script>
+const electron = require('electron')
+
+export default {
+  name: "Dll",
+  created() {
+    console.log('electron', electron)
+  }
+}
+</script>
+
 <style>
 @import "../src/style/app.scss";
 
