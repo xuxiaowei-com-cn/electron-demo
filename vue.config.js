@@ -1,7 +1,16 @@
 module.exports = {
     pluginOptions: {
         electronBuilder: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            externals: ['ffi-napi', 'ref-napi'],
+            builderOptions: {
+                extraResources: [
+                    {
+                        from: "./dll/myAddDll.dll",
+                        to: "../dll/myAddDll.dll"
+                    }
+                ]
+            }
         }
     }
 }
