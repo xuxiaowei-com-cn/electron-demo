@@ -8,5 +8,46 @@
 
 <h3>首页</h3>
 
+<button id="Open1" style="visibility: collapse;">Open 1 window</button>
+<button id="Open2" style="visibility: collapse;">Open 2 windows</button>
+<button id="Open3" style="visibility: collapse;">Open 3 windows</button>
+<br/>
+<br/>
+<input id="numA" type="text"/>
+<input id="numB" type="text"/>
+<button id="CalcButton">调用dll计算</button>
+
+<script>
+    const electron = require("electron");
+
+    //call ffi test
+    const ffi = require("ffi-napi");
+
+    const myAddDll = new ffi.Library('./dll/myAddDll', {
+        'funAdd':
+            [
+                'int', ['int', 'int'],
+            ],
+    });
+
+    document.getElementById("CalcButton").onclick = function () {
+        const result = myAddDll.funAdd(parseInt(document.getElementById("numA").value),
+            parseInt(document.getElementById("numB").value));
+
+        electron.remote.dialog.showMessageBox({
+            type: 'info',
+            title: '返回dll的运算结果',
+            message: result.toString(),
+            buttons: ['ok', 'cancel']
+        }, (index) => {
+            if (index === 0) {
+                console.log('ok');
+            } else {
+                console.log('cancel');
+            }
+        })
+    }
+</script>
+
 </body>
 </html>

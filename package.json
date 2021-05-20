@@ -22,5 +22,8 @@
   "homepage": "https://github.com/xuxiaowei-com-cn/electron-demo#readme",
   "devDependencies": {
     "electron": "^9.4.4"
+  },
+  "dependencies": {
+    "ffi-napi": "^4.0.3"
   }
 }
