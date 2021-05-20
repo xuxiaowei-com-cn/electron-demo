@@ -76,7 +76,7 @@ app.on('ready', async () => {
   // eslint-disable-next-line no-undef
   let faviconPath = path.join(__static, 'favicon.ico')
   // eslint-disable-next-line no-undef
-  let logoPath = path.join(__static, 'logo.png')
+  // let logoPath = path.join(__static, 'logo.png')
 
   let tray = new Tray(faviconPath)
 
@@ -102,17 +102,18 @@ app.on('ready', async () => {
 
   tray.setContextMenu(menu)
 
-  let flag = true
-
-  setInterval(()=>{
-    if (flag) {
-      tray.setImage(faviconPath)
-      flag = false
-    } else {
-      tray.setImage(logoPath)
-      flag = true
-    }
-  }, 600)
+  // 禁用托盘图标闪烁
+  // let flag = true
+  //
+  // setInterval(()=>{
+  //   if (flag) {
+  //     tray.setImage(faviconPath)
+  //     flag = false
+  //   } else {
+  //     tray.setImage(logoPath)
+  //     flag = true
+  //   }
+  // }, 600)
 
 })
 
