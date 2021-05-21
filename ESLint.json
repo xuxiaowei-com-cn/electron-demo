@@ -605,7 +605,7 @@
         },
         "comma-spacing": {
           "$ref": "#/definitions/rule",
-          "description": "Enforce consistent spacing before and after commas"
+          "description": "在逗号前后强制使用一致的间距"
         },
         "comma-style": {
           "$ref": "#/definitions/rule",

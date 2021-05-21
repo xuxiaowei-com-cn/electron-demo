@@ -52,6 +52,7 @@
     },
     "rules": {
       "comma-dangle": "error",
+      "comma-spacing": "error",
       "curly": "error",
       "eqeqeq": "error",
       "no-eval": "error",
