@@ -836,7 +836,7 @@
         },
         "no-unneeded-ternary": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow ternary operators when simpler alternatives exist"
+          "description": "存在更简单的替代方案时，禁止三元运算符"
         },
         "no-whitespace-before-property": {
           "$ref": "#/definitions/rule",
