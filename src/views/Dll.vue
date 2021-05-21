@@ -28,7 +28,7 @@ export default {
   methods: {
     dll() {
 
-      fs.access(dllPath, function (err){
+      fs.access(dllPath, function (err) {
         if (err) {
           console.error('DLL 文件不存在：', dllPath)
           return dialog.showMessageBox({
