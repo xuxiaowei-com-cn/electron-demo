@@ -14,6 +14,8 @@
 
 <button id="sendMsg3">多个渲染进程向主进程发送同样的消息，消息发送完成之后，需要主进程响应消息给发送者，也就是发送消息给对应的渲染进程</button>
 
+<button id="sendMsg4">多个渲染进程向主进程发送同样的消息，消息发送完成之后，需要主进程响应消息给所有可接收的渲染进程</button>
+
 <span>查看控制台消息</span>
 
 <script>
@@ -64,6 +66,18 @@
 
     // 主进程向渲染进程发送消息
     ipcRenderer.on('msg_main3render', (event, param1, param2) => {
+        console.log('渲染进程接收到消息1', param1)
+        console.log('渲染进程接收到消息2', param2)
+        console.log('渲染进程接收到发送者', event.sender)
+    })
+
+    // 渲染进程向主进程发送消息
+    document.querySelector('#sendMsg4').addEventListener('click', () => {
+        ipcRenderer.send('msg_render4main', {name: 'param1'}, {name: 'param2'})
+    })
+
+    // 主进程向渲染进程发送消息
+    ipcRenderer.on('msg_main4render', (event, param1, param2) => {
         console.log('渲染进程接收到消息1', param1)
         console.log('渲染进程接收到消息2', param2)
         console.log('渲染进程接收到发送者', event.sender)

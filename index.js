@@ -1,4 +1,4 @@
-const { app, ipcMain, BrowserWindow } = require('electron')
+const { app, ipcMain, webContents, BrowserWindow } = require('electron')
 
 require('@electron/remote/main').initialize()
 
@@ -48,6 +48,15 @@ app.on('ready', function () {
         console.log(param1)
         console.log(param2)
         console.log(event.sender)
+    })
+
+    ipcMain.on('msg_render4main', (event, param1, param2) => {
+        console.log('主进程接收到消息1', param1)
+        console.log('主进程接收到消息2', param2)
+        console.log('主进程接收到发送者', event.sender)
+        for (let i in webContents.getAllWebContents()) {
+            webContents.getAllWebContents()[i].send('msg_main4render', param1, param2)
+        }
     })
 
 })
