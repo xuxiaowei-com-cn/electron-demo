@@ -71,7 +71,8 @@
       "no-nested-ternary": "error",
       "no-unneeded-ternary": "error",
       "require-jsdoc": "error",
-      "spaced-comment": "error"
+      "spaced-comment": "error",
+      "no-var": "error"
     }
   },
   "bugs": {

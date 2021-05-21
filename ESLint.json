@@ -1027,7 +1027,7 @@
         },
         "no-var": {
           "$ref": "#/definitions/rule",
-          "description": "Require let or const instead of var"
+          "description": "需要用 let 或 const 代替 var"
         },
         "object-shorthand": {
           "$ref": "#/definitions/rule",
