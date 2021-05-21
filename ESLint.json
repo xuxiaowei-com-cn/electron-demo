@@ -895,7 +895,7 @@
         },
         "require-jsdoc": {
           "$ref": "#/definitions/rule",
-          "description": "Require JSDoc comments"
+          "description": "需要JSDoc注释"
         },
         "semi": {
           "$ref": "#/definitions/rule",

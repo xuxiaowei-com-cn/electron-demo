@@ -15,6 +15,10 @@ protocol.registerSchemesAsPrivileged([
 
 let win
 
+/**
+ * 异步创建窗口
+ * @returns {Promise<void>}
+ */
 async function createWindow() {
   // Create the browser window.
   win = new BrowserWindow({
