@@ -86,3 +86,9 @@ D:\WebstormProjects\electron-demo>
 npm config set ELECTRON_MIRROR https://npm.taobao.org/mirrors/electron/
 npm i -D electron
 ```
+
+- 升级 electron 后修正 remote 使用
+
+```
+npm i -D @electron/remote
+```

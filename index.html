@@ -11,7 +11,7 @@
 <button id="makeNewWindow">使用渲染进程创建一个新窗口</button>
 
 <script>
-    let {remote} = require('electron')
+    let remote = require('@electron/remote')
     let win = null;
     document.querySelector('#makeNewWindow').addEventListener('click', function () {
         win = new remote.BrowserWindow({
