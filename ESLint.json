@@ -801,7 +801,7 @@
         },
         "no-nested-ternary": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow nested ternary expressions"
+          "description": "禁止嵌套三元表达式"
         },
         "no-new-object": {
           "$ref": "#/definitions/rule",

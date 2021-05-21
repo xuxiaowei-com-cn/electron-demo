@@ -67,7 +67,8 @@
         "error",
         120
       ],
-      "no-multiple-empty-lines": "error"
+      "no-multiple-empty-lines": "error",
+      "no-nested-ternary": "error"
     }
   },
   "bugs": {
