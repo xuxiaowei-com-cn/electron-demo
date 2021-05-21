@@ -60,8 +60,8 @@ export default {
         buttons: ['ok', 'cancel']
       })
 
-      resultMessage.then((e) => {
-        if (e.response === 0) {
+      resultMessage.then((result) => {
+        if (result.response === 0) {
           console.log('点击了确定')
         } else {
           console.log('点击了取消')

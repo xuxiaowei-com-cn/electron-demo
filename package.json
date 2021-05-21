@@ -57,7 +57,8 @@
       "eqeqeq": "error",
       "no-eval": "error",
       "no-multi-spaces": "error",
-      "eol-last": "error"
+      "eol-last": "error",
+      "id-length": "error"
     }
   },
   "bugs": {

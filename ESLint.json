@@ -653,7 +653,7 @@
         },
         "id-length": {
           "$ref": "#/definitions/rule",
-          "description": "Enforce minimum and maximum identifier lengths"
+          "description": "强制最小和最大标识符长度"
         },
         "id-match": {
           "$ref": "#/definitions/rule",
