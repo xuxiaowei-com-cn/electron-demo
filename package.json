@@ -52,7 +52,8 @@
     },
     "rules": {
       "comma-dangle": "error",
-      "curly": "error"
+      "curly": "error",
+      "eqeqeq": "error"
     }
   },
   "bugs": {

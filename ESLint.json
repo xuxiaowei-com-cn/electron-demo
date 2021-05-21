@@ -218,7 +218,7 @@
         },
         "eqeqeq": {
           "$ref": "#/definitions/rule",
-          "description": "Require the use of === and !=="
+          "description": "需要使用 === 和 !=="
         },
         "guard-for-in": {
           "$ref": "#/definitions/rule",
