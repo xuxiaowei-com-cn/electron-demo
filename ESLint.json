@@ -322,7 +322,7 @@
         },
         "no-multi-spaces": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow multiple spaces"
+          "description": "禁止多个空格"
         },
         "no-multi-str": {
           "$ref": "#/definitions/rule",

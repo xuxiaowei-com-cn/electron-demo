@@ -54,7 +54,8 @@
       "comma-dangle": "error",
       "curly": "error",
       "eqeqeq": "error",
-      "no-eval": "error"
+      "no-eval": "error",
+      "no-multi-spaces": "error"
     }
   },
   "bugs": {
