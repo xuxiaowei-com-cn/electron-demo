@@ -12,7 +12,7 @@
 <button id="openDevToolsBtn2">控制开发者工具2</button>
 
 <script>
-    let {remote} = require('electron')
+    const remote = require('@electron/remote')
     document.querySelector('#openDevToolsBtn').addEventListener('click', function () {
         let isDevToolsOpened = remote.getCurrentWindow().webContents.isDevToolsOpened()
         if (isDevToolsOpened) {
