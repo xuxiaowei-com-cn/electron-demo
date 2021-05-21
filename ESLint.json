@@ -709,7 +709,7 @@
         },
         "max-len": {
           "$ref": "#/definitions/rule",
-          "description": "Enforce a maximum line length"
+          "description": "强制执行最大行长度"
         },
         "max-lines": {
           "$ref": "#/definitions/rule",

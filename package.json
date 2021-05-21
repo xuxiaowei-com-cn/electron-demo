@@ -59,7 +59,14 @@
       "no-multi-spaces": "error",
       "eol-last": "error",
       "id-length": "error",
-      "indent": ["error", 2]
+      "indent": [
+        "error",
+        2
+      ],
+      "max-len": [
+        "error",
+        120
+      ]
     }
   },
   "bugs": {
