@@ -132,3 +132,57 @@ npm i -D sass-loader
 ### vuex
 
 - 使用 vue ui 添加 vuex
+
+### DLL
+
+- 安装 windows-build-tools
+    - 管理员身份运行
+    - 自动安装 Python 2.7
+        - ![Python 2.7](./img/img1.png)
+    - 自动安装 Visual Studio 2017
+        - ![Visual Studio 2017](./img/img2.png)
+    - 自动安装 Windows Kits
+        - ![Windows Kits](./img/img3.png)
+
+```
+npm i -g --production windows-build-tools
+```
+
+- 安装 ffi-napi
+    - 日志输出如下内容，则说明 ffi-napi、windows-build-tools 安装没有问题
+        ```
+        > ffi-napi@4.0.3 install E:\WebstormProjects\electron-demo\node_modules\ffi-napi
+        > node-gyp-build
+        
+        
+        E:\WebstormProjects\electron-demo\node_modules\ffi-napi>if not defined npm_config_node_gyp (node "D:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin\\..\..\nod
+        e_modules\node-gyp\bin\node-gyp.js" rebuild )  else (node "D:\Program Files\nodejs\node_modules\npm\node_modules\node-gyp\bin\node-gyp.js" rebuild )
+        在此解决方案中一次生成一个项目。若要启用并行生成，请添加“/m”开关。
+        Preprocessing assembly file ..\..\..\deps\libffi\src\x86\win64_intel.preasm
+        win64_intel.preasm
+        Building assembly file Release\obj\ffi\\win64_intel.asm
+        Assembling: Release\obj\ffi\win64_intel.asm
+        prep_cif.c
+        types.c
+        raw_api.c
+        java_raw_api.c
+        closures.c
+        ffiw64.c
+        win_delay_load_hook.cc
+        ffi.vcxproj -> E:\WebstormProjects\electron-demo\node_modules\ffi-napi\build\Release\\libffi.lib
+        nothing.c
+        win_delay_load_hook.cc
+        nothing.vcxproj -> E:\WebstormProjects\electron-demo\node_modules\ffi-napi\build\Release\\nothing.lib
+        ffi.cc
+        callback_info.cc
+        threaded_callback_invokation.cc
+        win32-dlfcn.cc
+        win_delay_load_hook.cc
+        正在创建库 E:\WebstormProjects\electron-demo\node_modules\ffi-napi\build\Release\ffi_bindings.lib 和对象 E:\WebstormProjects\electron-demo\node_modules\ffi-napi\build\Release\ffi_bindin
+        gs.exp
+        ffi_bindings.vcxproj -> E:\WebstormProjects\electron-demo\node_modules\ffi-napi\build\Release\\ffi_bindings.node
+        ```
+
+```
+ffi-napi
+```
