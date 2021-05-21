@@ -927,7 +927,7 @@
         },
         "spaced-comment": {
           "$ref": "#/definitions/rule",
-          "description": "Enforce consistent spacing after the // or /* in a comment"
+          "description": "在 // 或 /* 之后的注释 强制保持一致的间距"
         },
         "space-infix-ops": {
           "$ref": "#/definitions/rule",

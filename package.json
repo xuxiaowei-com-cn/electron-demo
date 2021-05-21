@@ -70,7 +70,8 @@
       "no-multiple-empty-lines": "error",
       "no-nested-ternary": "error",
       "no-unneeded-ternary": "error",
-      "require-jsdoc": "error"
+      "require-jsdoc": "error",
+      "spaced-comment": "error"
     }
   },
   "bugs": {
