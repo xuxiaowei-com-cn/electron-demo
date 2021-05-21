@@ -793,7 +793,7 @@
         },
         "no-multiple-empty-lines": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow multiple empty lines"
+          "description": "禁止多行空行"
         },
         "no-negated-condition": {
           "$ref": "#/definitions/rule",

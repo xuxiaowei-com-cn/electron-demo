@@ -66,7 +66,8 @@
       "max-len": [
         "error",
         120
-      ]
+      ],
+      "no-multiple-empty-lines": "error"
     }
   },
   "bugs": {
