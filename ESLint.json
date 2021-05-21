@@ -621,7 +621,7 @@
         },
         "eol-last": {
           "$ref": "#/definitions/rule",
-          "description": "Enforce at least one newline at the end of files"
+          "description": "在文件末尾至少强制一个换行符"
         },
         "func-call-spacing": {
           "$ref": "#/definitions/rule",

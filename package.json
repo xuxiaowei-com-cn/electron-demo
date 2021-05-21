@@ -56,7 +56,8 @@
       "curly": "error",
       "eqeqeq": "error",
       "no-eval": "error",
-      "no-multi-spaces": "error"
+      "no-multi-spaces": "error",
+      "eol-last": "error"
     }
   },
   "bugs": {
