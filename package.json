@@ -53,7 +53,8 @@
     "rules": {
       "comma-dangle": "error",
       "curly": "error",
-      "eqeqeq": "error"
+      "eqeqeq": "error",
+      "no-eval": "error"
     }
   },
   "bugs": {

@@ -258,7 +258,7 @@
         },
         "no-eval": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow the use of eval()"
+          "description": "禁止使用 eval()"
         },
         "no-extend-native": {
           "$ref": "#/definitions/rule",
