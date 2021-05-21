@@ -1,7 +1,8 @@
 'use strict'
 
-import { app, protocol, BrowserWindow, Tray, Menu } from 'electron'
-import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
+import {app, BrowserWindow, Menu, protocol, Tray} from 'electron'
+import {createProtocol} from 'vue-cli-plugin-electron-builder/lib'
+
 const isDevelopment = process.env.NODE_ENV !== 'production'
 let path = require('path')
 
@@ -9,7 +10,7 @@ require('@electron/remote/main').initialize()
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
-  { scheme: 'app', privileges: { secure: true, standard: true } }
+  {scheme: 'app', privileges: {secure: true, standard: true}}
 ])
 
 let win
@@ -33,7 +34,7 @@ async function createWindow() {
     // Load the url of the dev server if in development mode
     await win.loadURL(process.env.WEBPACK_DEV_SERVER_URL, {
       userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
-          'Chrome/90.0.4430.212 Safari/537.36'
+        'Chrome/90.0.4430.212 Safari/537.36'
     })
     if (!process.env.IS_TEST) {
       win.webContents.openDevTools()
@@ -43,7 +44,7 @@ async function createWindow() {
     // Load the index.html when not in development
     win.loadURL('app://./index.html', {
       userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
-          'Chrome/90.0.4430.212 Safari/537.36'
+        'Chrome/90.0.4430.212 Safari/537.36'
     })
   }
 }
