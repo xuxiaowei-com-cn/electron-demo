@@ -30,7 +30,7 @@
       "properties": {
         "comma-dangle": {
           "$ref": "#/definitions/rule",
-          "description": "Require or disallow trailing commas"
+          "description": "要求或禁止尾随逗号"
         },
         "for-direction": {
           "$ref": "#/definitions/rule",

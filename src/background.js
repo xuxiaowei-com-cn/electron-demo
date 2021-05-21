@@ -92,7 +92,7 @@ app.on('ready', async () => {
         type: 'normal',
         click() {
             win.show()
-        },
+        }
     }, {
       label: '退出应用',
       type: 'normal',

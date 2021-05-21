@@ -45,8 +45,8 @@ export default {
       const myAddDll = new ffi.Library(dllPath, {
         'funAdd':
             [
-              'int', ['int', 'int'],
-            ],
+              'int', ['int', 'int']
+            ]
       })
 
       const result = myAddDll.funAdd(
