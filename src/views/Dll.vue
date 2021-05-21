@@ -14,7 +14,6 @@ const path = require('path')
 const fs = require("fs")
 
 // 获取 DLL 路径
-// eslint-disable-next-line no-undef
 let dllPath = path.join(__static, 'dll/myAddDll.dll')
 
 // 修正开发环境的路径

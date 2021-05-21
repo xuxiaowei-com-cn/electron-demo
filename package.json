@@ -40,6 +40,9 @@
     "env": {
       "node": true
     },
+    "globals": {
+      "__static": true
+    },
     "extends": [
       "plugin:vue/vue3-essential",
       "eslint:recommended"

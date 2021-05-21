@@ -25,7 +25,6 @@ async function createWindow() {
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
       contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION,
-      // eslint-disable-next-line no-undef
       preload: path.join(__static, 'preload.js')
     }
   })
@@ -75,9 +74,7 @@ app.on('ready', async () => {
   // }
   createWindow()
 
-  // eslint-disable-next-line no-undef
   let faviconPath = path.join(__static, 'favicon.ico')
-  // eslint-disable-next-line no-undef
   // let logoPath = path.join(__static, 'logo.png')
 
   let tray = new Tray(faviconPath)
