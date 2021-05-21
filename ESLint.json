@@ -202,7 +202,7 @@
         },
         "curly": {
           "$ref": "#/definitions/rule",
-          "description": "Enforce consistent brace style for all control statements"
+          "description": "对所有控制语句强制使用一致的大括号样式"
         },
         "default-case": {
           "$ref": "#/definitions/rule",

@@ -51,7 +51,8 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "comma-dangle": "error"
+      "comma-dangle": "error",
+      "curly": "error"
     }
   },
   "bugs": {
