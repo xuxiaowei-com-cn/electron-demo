@@ -34,79 +34,79 @@
         },
         "for-direction": {
           "$ref": "#/definitions/rule",
-          "description": "Enforce “for” loop update clause moving the counter in the right direction"
+          "description": "强制执行“for”循环更新子句，以正确的方向移动计数器"
         },
         "getter-return": {
           "$ref": "#/definitions/rule",
-          "description": "Enforce return statements in getters"
+          "description": "在getter中强制执行return语句"
         },
         "no-await-in-loop": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow await inside of loops"
+          "description": "禁止在循环内等待"
         },
         "no-compare-neg-zero": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow comparing against -0"
+          "description": "不允许与-0比较"
         },
         "no-cond-assign": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow assignment operators in conditional expressions"
+          "description": "禁止条件表达式中的赋值运算符"
         },
         "no-console": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow the use of console"
+          "description": "禁止使用控制台"
         },
         "no-constant-condition": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow constant expressions in conditions"
+          "description": "禁止条件中的常量表达式"
         },
         "no-control-regex": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow control characters in regular expressions"
+          "description": "禁止在正则表达式中使用控制字符"
         },
         "no-debugger": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow the use of debugger"
+          "description": "禁止使用调试器"
         },
         "no-dupe-args": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow duplicate arguments in function definitions"
+          "description": "禁止在函数定义中使用重复的参数"
         },
         "no-dupe-keys": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow duplicate keys in object literals"
+          "description": "禁止在对象文字中使用重复键"
         },
         "no-duplicate-case": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow duplicate case labels"
+          "description": "禁止重复的案例标签"
         },
         "no-empty": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow empty block statements"
+          "description": "禁止空块语句"
         },
         "no-empty-character-class": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow empty character classes in regular expressions"
+          "description": "禁止在正则表达式中使用空字符类"
         },
         "no-ex-assign": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow reassigning exceptions in catch clauses"
+          "description": "禁止在catch子句中重新分配异常"
         },
         "no-extra-boolean-cast": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow unnecessary boolean casts"
+          "description": "禁止不必要的布尔类型转换"
         },
         "no-extra-parens": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow unnecessary parentheses"
+          "description": "禁止不必要的括号"
         },
         "no-extra-semi": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow unnecessary semicolons"
+          "description": "禁止不必要的分号"
         },
         "no-func-assign": {
           "$ref": "#/definitions/rule",
-          "description": "Disallow reassigning function declarations"
+          "description": "禁止重新分配功能声明"
         },
         "no-inner-declarations": {
           "$ref": "#/definitions/rule",
