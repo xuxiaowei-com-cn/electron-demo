@@ -665,7 +665,7 @@
         },
         "indent": {
           "$ref": "#/definitions/rule",
-          "description": "Enforce consistent indentation"
+          "description": "强制一致缩进"
         },
         "indent-legacy": {
           "$ref": "#/definitions/rule",

@@ -89,16 +89,16 @@ app.on('ready', async () => {
 
   let menu = Menu.buildFromTemplate([
     {
-        label: '显示窗口',
-        type: 'normal',
-        click() {
-            win.show()
-        }
+      label: '显示窗口',
+      type: 'normal',
+      click() {
+        win.show()
+      }
     }, {
       label: '退出应用',
       type: 'normal',
       click() {
-          app.quit()
+        app.quit()
       }
     }
   ])

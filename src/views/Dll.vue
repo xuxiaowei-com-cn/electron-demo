@@ -49,8 +49,8 @@ export default {
       })
 
       const result = myAddDll.funAdd(
-          parseInt(document.getElementById("numA").value),
-          parseInt(document.getElementById("numB").value)
+        parseInt(document.getElementById("numA").value),
+        parseInt(document.getElementById("numB").value)
       )
 
       let resultMessage = dialog.showMessageBox({
