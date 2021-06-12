@@ -15,7 +15,7 @@
     const notificationBasic = {title: '基本通知', body: '短消息部分'}
     const notificationBasicButton = document.getElementById('basic-noti')
     notificationBasicButton.addEventListener('click', () => {
-        const myNotification = new window.Notification(notification.title, notificationBasic)
+        const myNotification = new window.Notification(notificationBasic.title, notificationBasic)
         myNotification.onclick = () => {
             alert('已单击通知')
         }
