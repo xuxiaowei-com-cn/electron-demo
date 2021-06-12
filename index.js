@@ -6,6 +6,10 @@ const BrowserWindow = electron.BrowserWindow
 
 let win;
 
+// 标识
+// 如果 Windows 屏蔽了、或者不提示 Notification，可尝试修改 app.setAppUserModelId()
+app.setAppUserModelId("cn.com.xuxiaowei");
+
 app.on('ready', function () {
 
     win = new BrowserWindow({
