@@ -186,3 +186,7 @@ npm i -g --production windows-build-tools
 ```
 ffi-napi
 ```
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/xuxiaowei-com-cn/electron-demo.svg)](https://starchart.cc/xuxiaowei-com-cn/electron-demo)
